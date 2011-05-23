@@ -1,14 +1,20 @@
-package cz.zcu.kma.games.td.business;
+package cz.zcu.kma.games.td.business.impl;
 
 import cz.zcu.kma.games.td.business.iface.Position;
 
 public class Position2D implements Position {
 
-	protected double x;
+	private double x;
 
-	protected double y;
+	private double y;
 
-	public double getDistance(Position pos) {
+	/**
+	 * 0-360
+	 */
+	private double angle;
+
+	@Override
+	public double getDistance(final Position pos) {
 		if (pos == null) {
 			throw new NullPointerException("Position cannot be null");
 		}
@@ -17,5 +23,17 @@ public class Position2D implements Position {
 		}
 		Position2D position = (Position2D) pos;
 		return Math.sqrt(Math.pow(x - position.x, 2) + Math.pow(y - position.y, 2));
+	}
+
+	public double getX() {
+		return x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public double getAngle() {
+		return angle;
 	}
 }

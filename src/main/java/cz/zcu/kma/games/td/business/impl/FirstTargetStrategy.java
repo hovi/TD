@@ -1,7 +1,8 @@
-package cz.zcu.kma.games.td.business;
+package cz.zcu.kma.games.td.business.impl;
 
 import java.util.List;
 
+import cz.zcu.kma.games.td.business.Target;
 import cz.zcu.kma.games.td.business.iface.Position;
 import cz.zcu.kma.games.td.business.iface.TargetStrategy;
 
